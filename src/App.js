@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import infoCard from './components/infoCard';
+import infoCard2 from './components/infoCard2';
+import infoCard3 from './components/infoCard3';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import { useState } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Route path="/concesiones/c2-39" component={infoCard}/>
+      <Route path="/concesiones/c2-92" component={infoCard2}/>
+      <Route path="/concesiones/c2-46" component={infoCard3}/>
+    </Router>
+
   );
 }
 
